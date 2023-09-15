@@ -5,11 +5,13 @@ file_version: 1.1.3
 app_version: 1.17.0
 ---
 
+documentation
+
+<!-- empty line --><br/>
+
 This code snippet defines a function called `toggleTheme` that is called when an input is clicked. It checks if the input is checked, and if so, it calls a function called `setDarkMode()`. Otherwise, it calls a function called `setLightMode()`. The purpose of this code is to toggle between dark mode and light mode based on the state of the input.
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 src/components/darkMode/DarkMode.jsx
-<!-- collapsed -->
-
 ```javascript
 28         const toggleTheme = e => {
 29         if (e.target.checked) setDarkMode()
@@ -24,7 +26,20 @@ This code snippet defines a function called `toggleTheme` that is called when an
 
 <br/>
 
-<br/>
+This code snippet sets the dark mode theme on the body element by adding a 'data-theme' attribute with the value 'dark'. It also stores the selected theme in the browser's localStorage with the key "selectedTheme" and the value "dark".
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 src/components/darkMode/DarkMode.jsx
+```javascript
+6          const setDarkMode = () => {
+7              document.querySelector("body").setAttribute('data-theme', 'dark')
+8              // document.querySelector("body") = on selectionne l'élément html body
+9              // .setAttribute('data-theme', 'dark') = on lui attribut data-theme = dark
+10             localStorage.setItem("selectedTheme", "dark")
+11             // localStorage = on enregistre dans le navigateur un paramètre
+12             // .setItem("selectedTheme", "dark") = on lui stock une paire clé-valeur
+13         }
+14     
+```
 
 <br/>
 
